@@ -9,7 +9,7 @@ redirect_to post_path(params[:comment][:post_id])
 end
 def destroy
 @comment.destroy
-redirect_to root_path
+redirect_to request.referrer
 end
 private
 def auth

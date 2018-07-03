@@ -37,7 +37,8 @@
 <% if user_signed_in?%>
 <%= link_to 'Like', like_path(@post.id)%>
 <%=@post.likes.count%>
-
+<br>
+<%= link_to 'dislike', delete2_path(@post.id),method: :delete%>
 <%end%>
 <br>
  <% if user_signed_in? && current_user.id==@post.user_id %>
